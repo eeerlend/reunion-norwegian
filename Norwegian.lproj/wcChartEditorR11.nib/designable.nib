@@ -1,0 +1,1547 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="wcChartEditor">
+            <connections>
+                <outlet property="alignMenu" destination="971" id="994"/>
+                <outlet property="alignMenuItem" destination="186" id="724"/>
+                <outlet property="alignPicturesMenuItem" destination="200" id="725"/>
+                <outlet property="avPageSetup" destination="785" id="793"/>
+                <outlet property="chtCanvas" destination="452" id="459"/>
+                <outlet property="chtStatus" destination="465" id="471"/>
+                <outlet property="chtTools" destination="450" id="458"/>
+                <outlet property="copyMenuItem" destination="135" id="753"/>
+                <outlet property="fanMenuItem" destination="571" id="601"/>
+                <outlet property="framePicturesMenuItem" destination="942" id="970"/>
+                <outlet property="hMenuItemUpdateFF" destination="209" id="797"/>
+                <outlet property="hMenuPictureInBox" destination="191" id="795"/>
+                <outlet property="hMenuPictureInChart" destination="194" id="796"/>
+                <outlet property="layerMenu" destination="995" id="1000"/>
+                <outlet property="menubar" destination="93" id="120"/>
+                <outlet property="pictInBoxMenuItem" destination="190" id="759"/>
+                <outlet property="pictInChartMenuItem" destination="193" id="760"/>
+                <outlet property="popupPictAlign" destination="853" id="885"/>
+                <outlet property="popupPictFrame" destination="961" id="969"/>
+                <outlet property="popupPictSize" destination="868" id="886"/>
+                <outlet property="popupSelectBoxes" destination="STU-XI-KxO" id="sGN-Bj-Xfa"/>
+                <outlet property="popupTrim" destination="Rwl-5y-WdP" id="Eao-qE-Re0"/>
+                <outlet property="saveDefaultTextMenu" destination="772" id="783"/>
+                <outlet property="selectObjectMenuItem" destination="169" id="757"/>
+                <outlet property="sizePicturesMenuItem" destination="204" id="761"/>
+                <outlet property="timelineMenuItem" destination="586" id="602"/>
+                <outlet property="tlPerspMenuItem" destination="616" id="756"/>
+                <outlet property="tlWidthMenuItem" destination="619" id="755"/>
+                <outlet property="toolMenuItem" destination="142" id="754"/>
+                <outlet property="treeMenuItem" destination="480" id="600"/>
+                <outlet property="treeSpaceMenuItem" destination="640" id="752"/>
+                <outlet property="window" destination="449" id="461"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu title="NewApplication" systemMenu="main" id="93" userLabel="MainMenu">
+            <items>
+                <menuItem title="Reunion" id="66">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Reunion" systemMenu="apple" id="78">
+                        <items>
+                            <menuItem title="About Reunion" tag="1001" id="76">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="851"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="784">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences..." tag="3011" keyEquivalent="," id="887"/>
+                            <menuItem isSeparatorItem="YES" id="83">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="90">
+                                <menu key="submenu" title="Services" systemMenu="services" id="37"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="81">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide Reunion" keyEquivalent="h" id="35">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="804"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="86">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="805"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="60">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="806"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="40">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit Reunion" tag="1003" keyEquivalent="q" id="87">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="852"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" tag="3000" id="33">
+                    <menu key="submenu" title="File" id="92">
+                        <items>
+                            <menuItem title="Open..." tag="1102" keyEquivalent="o" id="51">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="328"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open Recent" tag="10010" id="828">
+                                <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="829">
+                                    <items>
+                                        <menuItem title="Clear Menu" id="830">
+                                            <connections>
+                                                <action selector="clearRecentDocuments:" target="-1" id="831"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="893"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Close" tag="3002" keyEquivalent="w" id="80">
+                                <connections>
+                                    <action selector="closeChartFile:" target="-2" id="1003"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save" tag="3003" keyEquivalent="s" id="73">
+                                <connections>
+                                    <action selector="saveDocument:" target="-1" id="727"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save As..." tag="3004" keyEquivalent="S" id="68">
+                                <connections>
+                                    <action selector="saveDocumentAs:" target="-1" id="728"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Open in Preview" id="uuo-qa-Lw7">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Open in Preview" id="GxB-Qw-99c">
+                                    <items>
+                                        <menuItem title="Chart Only" tag="3011" id="Nnb-Yy-JbE">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="Ikn-4l-IW6"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Chart with Frame" tag="3012" id="JC3-OP-0vc">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="Bmy-Kr-CcF"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Selected Objects Only" tag="3013" id="9Qj-0x-9uC">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="p1W-Yg-tSL"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Save Graphic File..." tag="3005" id="nwK-BQ-Dyq">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="6An-Dy-Nl0"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="58">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Get Info..." tag="3006" keyEquivalent="i" id="131">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="332"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Place Picture..." tag="3007" id="133">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="333"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="132">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Page Setup..." tag="3008" keyEquivalent="P" id="53">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="129"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Print..." tag="3009" keyEquivalent="p" id="89">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="130"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" tag="3100" id="88">
+                    <menu key="submenu" title="Edit" id="47">
+                        <items>
+                            <menuItem title="Undo" tag="3101" keyEquivalent="z" id="43">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="339"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" tag="3102" keyEquivalent="Z" id="50">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="340"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" tag="3120" id="135">
+                                <menu key="submenu" title="Copy" id="136">
+                                    <items>
+                                        <menuItem title="Selected Objects" tag="3121" keyEquivalent="c" id="137">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="334"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Chart" tag="3122" id="139">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="335"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Chart with Frame" tag="3123" id="140">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="336"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="894">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Use TIFF in Clipboard" tag="3125" id="895">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="896"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Paste" tag="3103" keyEquivalent="v" id="65">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="341"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="138">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Tool" tag="3130" id="142">
+                                <menu key="submenu" title="Tool" id="143">
+                                    <items>
+                                        <menuItem title="Object" state="on" tag="3131" id="147">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="342"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Text" tag="3132" id="144">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="343"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Find Text..." tag="3104" keyEquivalent="f" id="145">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="344"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Find Next" tag="3105" keyEquivalent="g" id="146">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="345"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Find Anything in Boxes..." tag="3209" keyEquivalent="A" id="897">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="900"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="141">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Add Shape" tag="3140" id="148">
+                                <menu key="submenu" title="Add Shape" id="149">
+                                    <items>
+                                        <menuItem title="Line" tag="3141" id="150">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="346"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Rectangle" tag="3142" id="156">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="347"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Round Rectangle" tag="3143" id="157">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="348"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Oval" tag="3144" id="158">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="349"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Add Text" tag="3150" id="151">
+                                <menu key="submenu" title="Add Text" id="152">
+                                    <items>
+                                        <menuItem title="Title" tag="3151" id="153">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="350"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Return Address" tag="3152" id="159">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="351"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Caption" tag="3153" id="160">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="352"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Signature" tag="3154" id="161">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="353"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Date" tag="3155" id="162">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="354"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Add Frame Title..." tag="3107" keyEquivalent="m" id="155">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="356"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Tree" id="480">
+                    <menu key="submenu" title="Tree" id="500">
+                        <items>
+                            <menuItem title="Orientation..." tag="3201" keyEquivalent="r" id="633">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="644"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redraw" tag="3201" alternate="YES" keyEquivalent="r" id="901">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="902"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Lines..." tag="3202" keyEquivalent="l" id="631">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="645"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Colors..." tag="3203" keyEquivalent="k" id="636">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="646"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="629">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Move Boxes Off Page Breaks" tag="3204" id="642">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="647"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Page Break Options..." tag="3205" id="641">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="648"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="798">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Squeeze Pedigree" tag="3206" id="637">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="649"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Space Between Boxes" tag="3220" id="640">
+                                <menu key="submenu" title="Space Between Boxes" id="643">
+                                    <items>
+                                        <menuItem title="Less Vertical" tag="3221" keyEquivalent="↑" id="639">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="650"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="More Vertical" tag="3222" keyEquivalent="↓" id="638">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="651"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Less Horizontal" tag="3223" keyEquivalent="←" id="632">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="652"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="More Horizontal" tag="3224" keyEquivalent="→" id="630">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="653"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Space Inside Boxes" tag="3230" id="917">
+                                <menu key="submenu" title="Space Inside Boxes" id="918">
+                                    <items>
+                                        <menuItem title="Less" tag="3231" keyEquivalent="" id="919">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="926"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="More" tag="3232" keyEquivalent="" id="920">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="923"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Locate Starting Box" tag="3207" keyEquivalent="b" id="634">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="654"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Overlap" tag="3208" id="635">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="655"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Fan" id="571">
+                    <menu key="submenu" title="Fan" id="567">
+                        <items>
+                            <menuItem title="Settings..." tag="3291" keyEquivalent="f" id="604">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="656"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Optimize Size" tag="3292" id="605">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="657"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Optimize Spacing" tag="3293" id="603">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="658"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Timeline" id="586">
+                    <menu key="submenu" title="Timeline" id="591">
+                        <items>
+                            <menuItem title="Settings..." tag="3251" id="611">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="659"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Colors..." tag="3252" id="614">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="660"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Optimize Height" tag="3253" id="608">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="661"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Set Width" tag="3260" id="619">
+                                <menu key="submenu" title="Set Width" id="621">
+                                    <items>
+                                        <menuItem title="1" tag="3261" id="612">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="662"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="2" tag="3262" id="625">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="663"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="3" tag="3263" id="610">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="664"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="4" tag="3264" id="609">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="665"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="5" tag="3265" id="607">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="666"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Other..." tag="3266" id="626">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="667"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Bar Content..." tag="3254" id="615">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="668"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="606">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Perspectives" tag="3270" id="616">
+                                <menu key="submenu" title="Perspectives" id="628">
+                                    <items>
+                                        <menuItem title="Add One.." tag="3271" id="620">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="669"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Add Set..." tag="3272" id="623">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="670"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="613">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Clean Up Left" tag="3274" id="624">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="672"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Clean Up Split" tag="3275" id="618">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="673"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Clean Up 45˚" tag="3276" id="622">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="674"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Clean Up 90˚" tag="3277" id="627">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="675"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Object" tag="3300" id="163">
+                    <menu key="submenu" title="Object" id="164">
+                        <items>
+                            <menuItem title="Select" tag="3340" id="169">
+                                <menu key="submenu" title="Select" id="170">
+                                    <items>
+                                        <menuItem title="All Objects" tag="3341" keyEquivalent="a" id="768">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="770"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="All Boxes" tag="3342" id="218">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="363"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="All Text Objects" tag="3343" id="219">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="364"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="All Pictures" tag="3344" id="220">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="365"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="769">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Unselect All" tag="3345" id="171">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="362"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="172">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Layer" tag="3350" id="173">
+                                <menu key="submenu" title="Layer" id="174">
+                                    <items>
+                                        <menuItem title="Front" tag="3351" keyEquivalent="F" id="175">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="366"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Back" tag="3352" keyEquivalent="B" id="221">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="367"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="766"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="gr" tag="3301" id="182">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="ug" tag="3302" id="1004">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="1005"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Align" tag="3360" id="186">
+                                <menu key="submenu" title="Align" id="187">
+                                    <items>
+                                        <menuItem title="Top" tag="3361" id="188">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="370"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Bottom" tag="3362" id="222">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="371"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Left" tag="3363" id="223">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="372"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Right" tag="3364" id="224">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="373"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Center Horizontally" tag="3366" id="225">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="374"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Center Vertically" tag="3365" id="226">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="375"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="227">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Center of Chart Horizontally" tag="3368" id="228">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="376"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Center of Chart Vertically" tag="3367" id="229">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="377"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="230">
+                                            <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                                        </menuItem>
+                                        <menuItem title="Everything to Top Left" tag="3369" id="231">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="378"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Everything to Center" tag="3370" keyEquivalent="e" id="232">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="379"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Duplicate" tag="3303" keyEquivalent="d" id="165">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="380"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" tag="3304" id="179">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="381"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="189">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Put Picture in Box" tag="3305" id="190">
+                                <menu key="submenu" title="Put Picture in Box" id="191">
+                                    <items>
+                                        <menuItem title="None" tag="3500" id="192"/>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="764"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Put Picture on Chart" tag="3306" id="193">
+                                <menu key="submenu" title="Put Picture on Chart" id="194">
+                                    <items>
+                                        <menuItem title="None" tag="3550" id="195"/>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="765"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Put Preferred Picture in Box" tag="3307" id="196">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="382"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Align Picture in Box" tag="3380" id="200">
+                                <menu key="submenu" title="Align Picture in Box" id="201">
+                                    <items>
+                                        <menuItem title="Top" tag="3381" id="202">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="383"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Left" tag="3383" id="234">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="384"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Left Stacked" tag="3385" id="235">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="385"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Right" tag="3384" id="236">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="386"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Right Stacked" tag="3386" id="237">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="387"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Bottom" tag="3382" id="238">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="388"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="762"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Size Picture in Box" tag="3390" id="204">
+                                <menu key="submenu" title="Size Picture in Box" id="927">
+                                    <items>
+                                        <menuItem title=".5&quot;" tag="3391" id="934">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="941"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title=".75&quot;" tag="3392" id="933">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="940"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="1&quot;" tag="3393" id="932">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="939"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="1.25&quot;" tag="3394" id="931">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="938"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="1.5&quot;" tag="3395" id="930">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="937"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="1.75&quot;" tag="3396" id="929">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="936"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="2&quot;" tag="3397" id="928">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="935"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="763"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Frame Picture in Box" tag="3308" id="942">
+                                <menu key="submenu" title="Frame Picture in Box" id="943">
+                                    <items>
+                                        <menuItem title="None" tag="3371" id="944">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="957"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Rectangle" tag="3372" id="945">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="951"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Soft Rectangle" tag="3373" id="959">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="960"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Soft Oval" tag="3374" id="946">
+                                            <connections>
+                                                <action selector="commandAction:" target="-2" id="958"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="956"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="208">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Update from Family File" tag="3310" id="209">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="389"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Go to Family View" tag="3311" id="210">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="390"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Mark People in Selected Boxes" tag="3210" id="898">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="899"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" title="A" id="211">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Add Box" tag="3312" id="212">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="391"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Save Default" tag="3330" id="213">
+                                <connections>
+                                    <action selector="saveDefault:" target="-2" id="777"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Lock Defaults" tag="3313" id="1001">
+                                <connections>
+                                    <action selector="saveDefault:" target="-2" id="1002"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" tag="3400" id="71">
+                    <menu key="submenu" title="Window" systemMenu="window" id="91">
+                        <items>
+                            <menuItem title="Tool Panel" tag="3401" keyEquivalent="t" id="239">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="393"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="82">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Show Grid" tag="3402" id="475">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="478"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Page Breaks" tag="3403" id="474">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="477"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="242">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Zoom Out" tag="3404" keyEquivalent="-" id="240">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="394"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom In" tag="3405" keyEquivalent="+" id="241">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="395"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="476">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="300 %" tag="3406" id="243">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="396"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="250 %" tag="3407" id="244">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="397"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="200 %" tag="3408" id="245">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="398"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="150 %" tag="3409" id="246">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="399"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="100 %" tag="3410" keyEquivalent="1" id="247">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="400"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="75 %" tag="3411" id="248">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="401"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="50 %" tag="3412" keyEquivalent="5" id="249">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="402"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="25 %" tag="3413" id="250">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="403"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="10 %" tag="3414" id="251">
+                                <connections>
+                                    <action selector="commandAction:" target="-2" id="404"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="252">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Cycle Through Windows" tag="191" keyEquivalent="`" id="807">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="840"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title=" Help" tag="9000" id="262">
+                    <menu key="submenu" title=" Help" id="255">
+                        <items>
+                            <menuItem title="Contents" tag="9002" keyEquivalent="?" id="254">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="841"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Tutorial" tag="9003" id="261">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="842"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Shortcuts" tag="9004" id="257">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="843"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Technical Support" tag="9005" id="258">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="844"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Upgrading" tag="9006" id="264">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="845"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="New Features" tag="9007" id="263">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="846"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="265">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Check for Updates..." tag="10003" id="256">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="847"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Reunion 11 Support Page..." tag="10001" id="849">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="850"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Reunion 11 Registration Page..." tag="10002" id="259">
+                                <connections>
+                                    <action selector="windowMenu:" target="449" id="848"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="*chart" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="449" userLabel="ChartEditor" customClass="winReunion">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="149" y="327" width="542" height="478"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="350" height="150"/>
+            <view key="contentView" id="448">
+                <rect key="frame" x="0.0" y="0.0" width="542" height="478"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="465" customClass="nsChartStatus">
+                        <rect key="frame" x="0.0" y="0.0" width="542" height="478"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView id="452" customClass="nsChartCanvas">
+                                <rect key="frame" x="116" y="0.0" width="426" height="478"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="chtStatus" destination="465" id="470"/>
+                                    <outlet property="chtTools" destination="450" id="464"/>
+                                </connections>
+                            </customView>
+                            <customView id="450" customClass="nsChartTools">
+                                <rect key="frame" x="0.0" y="0.0" width="107" height="478"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <matrix toolTip="Text line selection." verticalHuggingPriority="750" tag="1041" allowsEmptySelection="NO" autosizesCells="NO" id="695">
+                                        <rect key="frame" x="6" y="291" width="90" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <size key="cellSize" width="90" height="21"/>
+                                        <size key="intercellSpacing" width="4" height="0.0"/>
+                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="916">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                        <cells>
+                                            <column>
+                                                <buttonCell type="square" title="Line 1 Only" bezelStyle="shadowlessSquare" image="0FC5581E-25E5-4D7B-AC65-6A78D13FA9E4" alignment="center" state="on" borderStyle="border" tag="1" inset="2" id="696">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                </buttonCell>
+                                                <buttonCell type="square" title="Other Lines" bezelStyle="shadowlessSquare" image="0FC5581E-25E5-4D7B-AC65-6A78D13FA9E4" alignment="center" borderStyle="border" tag="2" inset="2" id="697">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                </buttonCell>
+                                                <buttonCell type="square" title="All Lines" bezelStyle="shadowlessSquare" alignment="center" borderStyle="border" inset="2" id="698">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                </buttonCell>
+                                            </column>
+                                        </cells>
+                                        <connections>
+                                            <action selector="commandAction:" target="450" id="708"/>
+                                        </connections>
+                                    </matrix>
+                                    <matrix toolTip="Frame line selection." verticalHuggingPriority="750" tag="1004" allowsEmptySelection="NO" autosizesCells="NO" id="686">
+                                        <rect key="frame" x="6" y="394" width="90" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <size key="cellSize" width="90" height="20"/>
+                                        <size key="intercellSpacing" width="4" height="0.0"/>
+                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="915">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="smallSystem"/>
+                                        </buttonCell>
+                                        <cells>
+                                            <column>
+                                                <buttonCell type="square" title="Outside Line" bezelStyle="shadowlessSquare" image="6DC58F64-629E-4ABE-8D73-80BB1D285BB2" alignment="center" state="on" borderStyle="border" tag="1004" inset="2" id="688">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                </buttonCell>
+                                                <buttonCell type="square" title="Inside Line" bezelStyle="shadowlessSquare" image="6DC58F64-629E-4ABE-8D73-80BB1D285BB2" alignment="center" borderStyle="border" tag="1005" inset="2" id="687">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <font key="font" metaFont="smallSystem"/>
+                                                </buttonCell>
+                                            </column>
+                                        </cells>
+                                        <connections>
+                                            <action selector="commandAction:" target="450" id="692"/>
+                                        </connections>
+                                    </matrix>
+                                    <matrix verticalHuggingPriority="750" tag="1001" allowsEmptySelection="NO" autosizesCells="NO" id="677">
+                                        <rect key="frame" x="57" y="449" width="44" height="22"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        <size key="cellSize" width="22" height="22"/>
+                                        <size key="intercellSpacing" width="0.0" height="2"/>
+                                        <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="914">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <cells>
+                                            <column>
+                                                <buttonCell type="square" bezelStyle="shadowlessSquare" image="cicn1558" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" toolTip="Normal object selection mode." tag="1001" inset="2" id="676">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </column>
+                                            <column>
+                                                <buttonCell type="square" bezelStyle="shadowlessSquare" image="cicn1559" imagePosition="only" alignment="center" borderStyle="border" toolTip="Add text mode." tag="1002" inset="2" id="678">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                            </column>
+                                        </cells>
+                                        <connections>
+                                            <action selector="commandAction:" target="450" id="680"/>
+                                        </connections>
+                                    </matrix>
+                                </subviews>
+                                <connections>
+                                    <outlet property="chartEditor" destination="-2" id="889"/>
+                                    <outlet property="chtCanvas" destination="452" id="466"/>
+                                    <outlet property="chtStatus" destination="465" id="467"/>
+                                    <outlet property="frameSelector" destination="686" id="691"/>
+                                    <outlet property="textModeSelector" destination="695" id="706"/>
+                                    <outlet property="toolSelector" destination="677" id="679"/>
+                                </connections>
+                            </customView>
+                        </subviews>
+                        <connections>
+                            <outlet property="chtCanvas" destination="452" id="469"/>
+                            <outlet property="chtTools" destination="450" id="468"/>
+                            <outlet property="wcWindow" destination="-2" id="472"/>
+                        </connections>
+                    </customView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="initialFirstResponder" destination="452" id="905"/>
+            </connections>
+        </window>
+        <menu title="Menu" autoenablesItems="NO" id="772" userLabel="saveDefaultText">
+            <items>
+                <menuItem title="Title" tag="3331" id="771">
+                    <connections>
+                        <action selector="saveDefault:" target="-2" id="778"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Return Address" tag="3332" id="773">
+                    <connections>
+                        <action selector="saveDefault:" target="-2" id="780"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Caption" tag="3333" id="774">
+                    <connections>
+                        <action selector="saveDefault:" target="-2" id="779"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Signature" tag="3334" id="775">
+                    <connections>
+                        <action selector="saveDefault:" target="-2" id="781"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Date" tag="3335" id="776">
+                    <connections>
+                        <action selector="saveDefault:" target="-2" id="782"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <customView id="785" userLabel="avPageSetup">
+            <rect key="frame" x="0.0" y="0.0" width="269" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button tag="106" id="792">
+                    <rect key="frame" x="0.0" y="2" width="173" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <buttonCell key="cell" type="check" title="Number pages" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="106" inset="2" id="913">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <button tag="105" id="791">
+                    <rect key="frame" x="0.0" y="22" width="173" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <buttonCell key="cell" type="check" title="Center chart" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="105" inset="2" id="912">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <button tag="104" id="790">
+                    <rect key="frame" x="0.0" y="42" width="232" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <buttonCell key="cell" type="check" title="Move boxes off page breaks" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="104" inset="2" id="911">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <textField verticalHuggingPriority="750" tag="103" id="789">
+                    <rect key="frame" x="10" y="68" width="262" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" tag="103" title="--nn--" id="910">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" tag="102" id="788">
+                    <rect key="frame" x="10" y="84" width="262" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" tag="102" title="--nn--" id="909">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" tag="101" id="787">
+                    <rect key="frame" x="10" y="100" width="262" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" tag="101" title="--nn--" id="908">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="786">
+                    <rect key="frame" x="-2" y="116" width="208" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Printing suggestions:" id="907">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+        </customView>
+        <menu title="Menu" id="853" userLabel="pictAlign">
+            <items>
+                <menuItem title="Top" tag="3381" id="856"/>
+                <menuItem title="Left" tag="3383" id="857"/>
+                <menuItem title="Left Stacked" tag="3385" id="858"/>
+                <menuItem title="Right" tag="3384" id="859"/>
+                <menuItem title="Right Stacked" tag="3386" id="860"/>
+                <menuItem title="Bottom" tag="3382" id="861"/>
+            </items>
+        </menu>
+        <menu title="Menu" id="868" userLabel="pictSize">
+            <items>
+                <menuItem title=".5&quot;" tag="3391" id="871"/>
+                <menuItem title=".75&quot;" tag="3392" id="872"/>
+                <menuItem title="1&quot;" tag="3393" id="873"/>
+                <menuItem title="1.25&quot;" tag="3394" id="874"/>
+                <menuItem title="1.5&quot;" tag="3395" id="875"/>
+                <menuItem title="1.75&quot;" tag="3396" id="876"/>
+                <menuItem title="2&quot;" tag="3397" id="877"/>
+            </items>
+        </menu>
+        <menu title="Menu" id="961" userLabel="pictFrame">
+            <items>
+                <menuItem title="None" tag="3371" id="968"/>
+                <menuItem title="Rectangle" tag="3372" id="967"/>
+                <menuItem title="Soft Rectangle" tag="3373" id="966"/>
+                <menuItem title="Soft Oval" tag="3374" id="965"/>
+            </items>
+        </menu>
+        <menu title="Align" id="971">
+            <items>
+                <menuItem title="Top" tag="3361" id="983">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="986"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Bottom" tag="3362" id="982">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="985"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Left" tag="3363" id="981">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="984"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Right" tag="3364" id="980">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="993"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Center Horizontally" tag="3366" id="979">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="992"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Center Vertically" tag="3365" id="978">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="991"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="977">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="Center of Chart Horizontally" tag="3368" id="976">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="990"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Center of Chart Vertically" tag="3367" id="975">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="989"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="974">
+                    <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                </menuItem>
+                <menuItem title="Everything to Top Left" tag="3369" id="973">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="988"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Everything to Center" tag="3370" keyEquivalent="e" id="972">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="987"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <menu title="Layer" id="995">
+            <items>
+                <menuItem title="Front" tag="3351" keyEquivalent="F" id="997">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="998"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Back" tag="3352" keyEquivalent="B" id="996">
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="999"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+        <menu title="Trim" autoenablesItems="NO" id="Rwl-5y-WdP" userLabel="trim">
+            <items>
+                <menuItem title="Each" tag="3211" id="maP-V6-N8k"/>
+                <menuItem title="Uniform" tag="3212" id="SOG-lI-oMh"/>
+            </items>
+        </menu>
+        <menu title="Select Boxes" autoenablesItems="NO" id="STU-XI-KxO" userLabel="Select Boxes">
+            <items>
+                <menuItem title="This Box" tag="3221" id="FyG-Y5-cU6">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Generation" tag="3222" id="aFo-1V-Kf0">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Generation+" tag="3223" id="5Qk-Su-gPt">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Ancestors" tag="3224" id="MOx-1a-at8">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Descendants" tag="3225" id="hjn-pq-bHn">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+    <resources>
+        <image name="0FC5581E-25E5-4D7B-AC65-6A78D13FA9E4" width="1" height="1">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1Z7MSwgMX3SFQoWGFpOUy5vYmplY3RzoReABIAK0hUKGh2iGxyA
+BYAGgAkQANIgCiEiXxAUTlNUSUZGUmVwcmVzZW50YXRpb26AB4AITxENkk1NACoAAAAMAAAAAAAOAQAA
+AwAAAAEAAQAAAQEAAwAAAAEAAQAAAQIAAwAAAAQAAAC6AQMAAwAAAAEAAQAAAQYAAwAAAAEAAgAAAREA
+BAAAAAEAAAAIARIAAwAAAAEAAQAAARUAAwAAAAEABAAAARYAAwAAAAEAAQAAARcABAAAAAEAAAAEARwA
+AwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAQAAADCh3MABwAADMgAAADKAAAAAAAIAAgACAAIAAEA
+AQABAAEAAAzIYXBwbAIQAABtbnRyUkdCIFhZWiAH3wAEAAoACQANADBhY3NwQVBQTAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWFwcGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAABFkZXNjAAABUAAAAGJkc2NtAAABtAAAAbBjcHJ0AAADZAAAACN3dHB0AAAD
+iAAAABRyWFlaAAADnAAAABRnWFlaAAADsAAAABRiWFlaAAADxAAAABRyVFJDAAAD2AAACAxhYXJnAAAL
+5AAAACB2Y2d0AAAMBAAAADBuZGluAAAMNAAAAD5jaGFkAAAMdAAAACxtbW9kAAAMoAAAAChiVFJDAAAD
+2AAACAxnVFJDAAAD2AAACAxhYWJnAAAL5AAAACBhYWdnAAAL5AAAACBkZXNjAAAAAAAAAAhEaXNwbGF5
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAbWx1YwAAAAAAAAAiAAAADGhySFIAAAAIAAABqGtvS1IAAAAIAAAB
+qG5iTk8AAAAIAAABqGlkAAAAAAAIAAABqGh1SFUAAAAIAAABqGNzQ1oAAAAIAAABqGRhREsAAAAIAAAB
+qHVrVUEAAAAIAAABqGFyAAAAAAAIAAABqGl0SVQAAAAIAAABqHJvUk8AAAAIAAABqGVzRVMAAAAIAAAB
+qGhlSUwAAAAIAAABqG5sTkwAAAAIAAABqGZpRkkAAAAIAAABqHpoVFcAAAAIAAABqHZpVk4AAAAIAAAB
+qHNrU0sAAAAIAAABqHpoQ04AAAAIAAABqHJ1UlUAAAAIAAABqGZyRlIAAAAIAAABqG1zAAAAAAAIAAAB
+qGNhRVMAAAAIAAABqHRoVEgAAAAIAAABqGVzWEwAAAAIAAABqGRlREUAAAAIAAABqGVuVVMAAAAIAAAB
+qHB0QlIAAAAIAAABqHBsUEwAAAAIAAABqGVsR1IAAAAIAAABqHN2U0UAAAAIAAABqHRyVFIAAAAIAAAB
+qGphSlAAAAAIAAABqHB0UFQAAAAIAAABqABpAE0AYQBjdGV4dAAAAABDb3B5cmlnaHQgQXBwbGUgSW5j
+LiwgMjAxNQAAWFlaIAAAAAAAAPMWAAEAAAABFspYWVogAAAAAAAAccAAADmKAAABZ1hZWiAAAAAAAABh
+IwAAueYAABP2WFlaIAAAAAAAACPyAAAMkAAAvdBjdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgA
+LQAyADYAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIAdwB8AIEAhgCLAJAAlQCaAJ8AowCoAK0AsgC3ALwA
+wQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0BEwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4B
+dQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcC
+cQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwADCwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64D
+ugPHA9MD4APsA/kEBgQTBCAELQQ7BEgEVQRjBHEEfgSMBJoEqAS2BMQE0wThBPAE/gUNBRwFKwU6BUkF
+WAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYnBjcGSAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0H
+TwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoIbgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8J
+pAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK8wsLCyILOQtRC2kLgAuYC7ALyAvhC/kMEgwqDEMM
+XAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2pDcMN3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14P
+eg+WD7MPzw/sEAkQJhBDEGEQfhCbELkQ1xD1ERMRMRFPEW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMT
+AxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixStFM4U8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW
++hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsb
+YxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkdwx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qfvx/qIBUg
+QSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKCIq8i3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgl
+lyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgNKD8ocSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYr
+aSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwugi63Lu4vJC9aL5Evxy/+MDUwbDCkMNsxEjFKMYIx
+ujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4
+jDjIOQU5Qjl/Obw5+To2OnQ6sjrvOy07azuqO+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA/IT9hP6I/
+4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31DwEQDREdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tH
+wEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91Q
+J1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZ
+GllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhdyV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9homH1Ykli
+nGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmboZz1nk2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v/bFds
+r20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6cZVx8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3
+VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF84X1BfaF+AX5ifsJ/I3+Ef+WAR4CogQqBa4HNgjCC
+koL0g1eDuoQdhICE44VHhauGDoZyhteHO4efiASIaYjOiTOJmYn+imSKyoswi5aL/IxjjMqNMY2Yjf+O
+Zo7OjzaPnpAGkG6Q1pE/kaiSEZJ6kuOTTZO2lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia
+1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNihR6G2oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n
+4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24ri2uoa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1
+irYBtnm28Ldot+C4WbjRuUq5wro7urW7LrunvCG8m70VvY++Cr6Evv+/er/1wHDA7MFnwePCX8Lbw1jD
+1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4yrfLNsu2zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j/S
+wdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls2fHadtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4czi
+U+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG6dDqW+rl63Dr++yG7RHtnO4o7rTvQO/M8Fjw5fFy8f/y
+jPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf65/t3/Af8mP0p/br+S/7c/23//3BhcmEAAAAAAAMA
+AAACZmYAAPKnAAANWQAAE9AAAAoOdmNndAAAAAAAAAABAAEAAAAAAAAAAQAAAAEAAAAAAAAAAQAAAAEA
+AAAAAAAAAQAAbmRpbgAAAAAAAAA2AACnQAAAVYAAAEzAAACewAAAJYAAAAzAAABQAAAAVEAAAjMzAAIz
+MwACMzMAAAAAAAAAAHNmMzIAAAAAAAEMcgAABfj///MdAAAHugAA/XL///ud///9pAAAA9kAAMBxbW1v
+ZAAAAAAAAAYQAACgBwAAAADJJx4AAAAAAAAAAAAAAAAAAAAAANIlJicoWiRjbGFzc25hbWVYJGNsYXNz
+ZXNfEBBOU0JpdG1hcEltYWdlUmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09i
+amVjdNIlJi0uV05TQXJyYXmiLSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVc
+TlNDb2xvclNwYWNlRDAgMAAQA4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tl
+eWVkQXJjaGl2ZXLRQEFUcm9vdIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwA
+jgCVAJoApQCnAKkAqwCwALMAtQC3ALkAuwDAANcA2QDbDnEOdg6BDooOnQ6hDrQOvw7IDs0O1Q7YDt0O
+7A7wDvcO/w8MDxEPEw8VDxoPIg8lDyoPMg81D0cPSg9PAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAA
+AAAAD1E
+</mutableData>
+        </image>
+        <image name="6DC58F64-629E-4ABE-8D73-80BB1D285BB2" width="1" height="1">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
+GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
+c1dOU0NvbG9ygAKADRIgwAAAgAOAC1Z7MSwgMX3SFQoWGFpOUy5vYmplY3RzoReABIAK0hUKGh2iGxyA
+BYAGgAkQANIgCiEiXxAUTlNUSUZGUmVwcmVzZW50YXRpb26AB4AITxENkk1NACoAAAAMKSosMQAOAQAA
+AwAAAAEAAQAAAQEAAwAAAAEAAQAAAQIAAwAAAAQAAAC6AQMAAwAAAAEAAQAAAQYAAwAAAAEAAgAAAREA
+BAAAAAEAAAAIARIAAwAAAAEAAQAAARUAAwAAAAEABAAAARYAAwAAAAEAAQAAARcABAAAAAEAAAAEARwA
+AwAAAAEAAQAAAVIAAwAAAAEAAQAAAVMAAwAAAAQAAADCh3MABwAADMgAAADKAAAAAAAIAAgACAAIAAEA
+AQABAAEAAAzIYXBwbAIQAABtbnRyUkdCIFhZWiAH3wAEAAoACQANADBhY3NwQVBQTAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWFwcGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAABFkZXNjAAABUAAAAGJkc2NtAAABtAAAAbBjcHJ0AAADZAAAACN3dHB0AAAD
+iAAAABRyWFlaAAADnAAAABRnWFlaAAADsAAAABRiWFlaAAADxAAAABRyVFJDAAAD2AAACAxhYXJnAAAL
+5AAAACB2Y2d0AAAMBAAAADBuZGluAAAMNAAAAD5jaGFkAAAMdAAAACxtbW9kAAAMoAAAAChiVFJDAAAD
+2AAACAxnVFJDAAAD2AAACAxhYWJnAAAL5AAAACBhYWdnAAAL5AAAACBkZXNjAAAAAAAAAAhEaXNwbGF5
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAbWx1YwAAAAAAAAAiAAAADGhySFIAAAAIAAABqGtvS1IAAAAIAAAB
+qG5iTk8AAAAIAAABqGlkAAAAAAAIAAABqGh1SFUAAAAIAAABqGNzQ1oAAAAIAAABqGRhREsAAAAIAAAB
+qHVrVUEAAAAIAAABqGFyAAAAAAAIAAABqGl0SVQAAAAIAAABqHJvUk8AAAAIAAABqGVzRVMAAAAIAAAB
+qGhlSUwAAAAIAAABqG5sTkwAAAAIAAABqGZpRkkAAAAIAAABqHpoVFcAAAAIAAABqHZpVk4AAAAIAAAB
+qHNrU0sAAAAIAAABqHpoQ04AAAAIAAABqHJ1UlUAAAAIAAABqGZyRlIAAAAIAAABqG1zAAAAAAAIAAAB
+qGNhRVMAAAAIAAABqHRoVEgAAAAIAAABqGVzWEwAAAAIAAABqGRlREUAAAAIAAABqGVuVVMAAAAIAAAB
+qHB0QlIAAAAIAAABqHBsUEwAAAAIAAABqGVsR1IAAAAIAAABqHN2U0UAAAAIAAABqHRyVFIAAAAIAAAB
+qGphSlAAAAAIAAABqHB0UFQAAAAIAAABqABpAE0AYQBjdGV4dAAAAABDb3B5cmlnaHQgQXBwbGUgSW5j
+LiwgMjAxNQAAWFlaIAAAAAAAAPMWAAEAAAABFspYWVogAAAAAAAAccAAADmKAAABZ1hZWiAAAAAAAABh
+IwAAueYAABP2WFlaIAAAAAAAACPyAAAMkAAAvdBjdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAjACgA
+LQAyADYAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIAdwB8AIEAhgCLAJAAlQCaAJ8AowCoAK0AsgC3ALwA
+wQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0BEwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4B
+dQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcC
+cQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwADCwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oDlgOiA64D
+ugPHA9MD4APsA/kEBgQTBCAELQQ7BEgEVQRjBHEEfgSMBJoEqAS2BMQE0wThBPAE/gUNBRwFKwU6BUkF
+WAVnBXcFhgWWBaYFtQXFBdUF5QX2BgYGFgYnBjcGSAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcrBz0H
+TwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoIbgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5CY8J
+pAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK8wsLCyILOQtRC2kLgAuYC7ALyAvhC/kMEgwqDEMM
+XAx1DI4MpwzADNkM8w0NDSYNQA1aDXQNjg2pDcMN3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9BD14P
+eg+WD7MPzw/sEAkQJhBDEGEQfhCbELkQ1xD1ERMRMRFPEW0RjBGqEckR6BIHEiYSRRJkEoQSoxLDEuMT
+AxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixStFM4U8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW
++hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsb
+YxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkdwx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qfvx/qIBUg
+QSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKCIq8i3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgl
+lyXHJfcmJyZXJocmtyboJxgnSSd6J6sn3CgNKD8ocSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysCKzYr
+aSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwugi63Lu4vJC9aL5Evxy/+MDUwbDCkMNsxEjFKMYIx
+ujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4
+jDjIOQU5Qjl/Obw5+To2OnQ6sjrvOy07azuqO+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA/IT9hP6I/
+4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31DwEQDREdEikTORRJFVUWaRd5GIkZnRqtG8Ec1R3tH
+wEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91Q
+J1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZ
+GllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhdyV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9homH1Ykli
+nGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmboZz1nk2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v/bFds
+r20IbWBtuW4SbmtuxG8eb3hv0XArcIZw4HE6cZVx8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3
+VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF84X1BfaF+AX5ifsJ/I3+Ef+WAR4CogQqBa4HNgjCC
+koL0g1eDuoQdhICE44VHhauGDoZyhteHO4efiASIaYjOiTOJmYn+imSKyoswi5aL/IxjjMqNMY2Yjf+O
+Zo7OjzaPnpAGkG6Q1pE/kaiSEZJ6kuOTTZO2lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8mmia
+1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNihR6G2oiailqMGo3aj5qRWpMelOKWpphqmi6b9p26n
+4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24ri2uoa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1
+irYBtnm28Ldot+C4WbjRuUq5wro7urW7LrunvCG8m70VvY++Cr6Evv+/er/1wHDA7MFnwePCX8Lbw1jD
+1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4yrfLNsu2zDXMtc01zbXONs62zzfPuNA50LrRPNG+0j/S
+wdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls2fHadtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4czi
+U+Lb42Pj6+Rz5PzlhOYN5pbnH+ep6DLovOlG6dDqW+rl63Dr++yG7RHtnO4o7rTvQO/M8Fjw5fFy8f/y
+jPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf65/t3/Af8mP0p/br+S/7c/23//3BhcmEAAAAAAAMA
+AAACZmYAAPKnAAANWQAAE9AAAAoOdmNndAAAAAAAAAABAAEAAAAAAAAAAQAAAAEAAAAAAAAAAQAAAAEA
+AAAAAAAAAQAAbmRpbgAAAAAAAAA2AACnQAAAVYAAAEzAAACewAAAJYAAAAzAAABQAAAAVEAAAjMzAAIz
+MwACMzMAAAAAAAAAAHNmMzIAAAAAAAEMcgAABfj///MdAAAHugAA/XL///ud///9pAAAA9kAAMBxbW1v
+ZAAAAAAAAAYQAACgBwAAAADJJx4AAAAAAAAAAAAAAAAAAAAAANIlJicoWiRjbGFzc25hbWVYJGNsYXNz
+ZXNfEBBOU0JpdG1hcEltYWdlUmVwoykqK18QEE5TQml0bWFwSW1hZ2VSZXBaTlNJbWFnZVJlcFhOU09i
+amVjdNIlJi0uV05TQXJyYXmiLSvSJSYwMV5OU011dGFibGVBcnJheaMwLSvTMzQKNTY3V05TV2hpdGVc
+TlNDb2xvclNwYWNlRDAgMAAQA4AM0iUmOTpXTlNDb2xvcqI5K9IlJjw9V05TSW1hZ2WiPCtfEA9OU0tl
+eWVkQXJjaGl2ZXLRQEFUcm9vdIABAAgAEQAaACMALQAyADcARgBMAFcAXgBlAHIAeQCBAIMAhQCKAIwA
+jgCVAJoApQCnAKkAqwCwALMAtQC3ALkAuwDAANcA2QDbDnEOdg6BDooOnQ6hDrQOvw7IDs0O1Q7YDt0O
+7A7wDvcO/w8MDxEPEw8VDxoPIg8lDyoPMg81D0cPSg9PAAAAAAAAAgEAAAAAAAAAQgAAAAAAAAAAAAAA
+AAAAD1E
+</mutableData>
+        </image>
+        <image name="cicn1558" width="16" height="16"/>
+        <image name="cicn1559" width="16" height="16"/>
+    </resources>
+</document>

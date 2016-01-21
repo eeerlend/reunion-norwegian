@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" defaultVersion="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="wcPrefs">
+            <connections>
+                <outlet property="theList" destination="17" id="18"/>
+                <outlet property="toolView" destination="19" id="23"/>
+                <outlet property="window" destination="5" id="15"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <window title="Reunion Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window" customClass="winReunion">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="179" y="369" width="424" height="268"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="424" height="268"/>
+            <value key="maxSize" type="size" width="424" height="268"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="424" height="268"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="17" customClass="nsPrefsList">
+                        <rect key="frame" x="0.0" y="-2" width="424" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button tag="117" id="79" customClass="nsPrefsButton">
+                                <rect key="frame" x="176" y="15" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Web" bezelStyle="regularSquare" image="32web" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="117" inset="2" id="117">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="83"/>
+                                </connections>
+                            </button>
+                            <button tag="116" id="78" customClass="nsPrefsButton">
+                                <rect key="frame" x="178" y="182" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Family View" bezelStyle="regularSquare" image="toolView" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="116" inset="2" id="116">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="96"/>
+                                </connections>
+                            </button>
+                            <button tag="115" id="77" customClass="nsPrefsButton">
+                                <rect key="frame" x="97" y="15" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Startup" bezelStyle="regularSquare" image="startup32" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="115" inset="2" id="115">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="95"/>
+                                </connections>
+                            </button>
+                            <button tag="113" id="75" customClass="nsPrefsButton">
+                                <rect key="frame" x="18" y="15" width="76" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Sources" bezelStyle="regularSquare" image="32source" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="113" inset="2" id="113">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="93"/>
+                                </connections>
+                            </button>
+                            <button tag="114" id="121" customClass="nsPrefsButton">
+                                <rect key="frame" x="330" y="104" width="76" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Slideshows" bezelStyle="regularSquare" image="32slideshow" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="113" inset="2" id="122">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="123"/>
+                                </connections>
+                            </button>
+                            <button tag="112" id="74" customClass="nsPrefsButton">
+                                <rect key="frame" x="256" y="104" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Reports" bezelStyle="regularSquare" image="32reports" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="112" inset="2" id="112">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="92"/>
+                                </connections>
+                            </button>
+                            <button tag="111" id="73" customClass="nsPrefsButton">
+                                <rect key="frame" x="178" y="104" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="privacy32" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="111" inset="2" id="111">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <string key="title">Privacy &amp;
+Sensitivity</string>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="91"/>
+                                </connections>
+                            </button>
+                            <button tag="110" id="72" customClass="nsPrefsButton">
+                                <rect key="frame" x="97" y="104" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Multimedia" bezelStyle="regularSquare" image="toolMultimediaF" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="110" inset="2" id="110">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="82"/>
+                                </connections>
+                            </button>
+                            <button tag="108" id="70" customClass="nsPrefsButton">
+                                <rect key="frame" x="18" y="104" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="General" bezelStyle="regularSquare" image="32general" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="108" inset="2" id="108">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="81"/>
+                                </connections>
+                            </button>
+                            <button tag="106" id="68" customClass="nsPrefsButton">
+                                <rect key="frame" x="330" y="182" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" title="Folders" bezelStyle="regularSquare" image="folders32" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="106" inset="2" id="106">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="88"/>
+                                </connections>
+                            </button>
+                            <button tag="105" id="67" customClass="nsPrefsButton">
+                                <rect key="frame" x="256" y="182" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="fields32" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="105" inset="2" id="105">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <string key="title">Fields
+</string>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="86"/>
+                                </connections>
+                            </button>
+                            <button tag="104" id="66" customClass="nsPrefsButton">
+                                <rect key="frame" x="97" y="182" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="dates32" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="104" inset="2" id="104">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <string key="title">Dates
+</string>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="84"/>
+                                </connections>
+                            </button>
+                            <button tag="103" id="65" customClass="nsPrefsButton">
+                                <rect key="frame" x="18" y="182" width="69" height="63"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="cstat32" imagePosition="above" alignment="center" lineBreakMode="charWrapping" tag="103" inset="2" id="103">
+                                    <behavior key="behavior" lightByContents="YES"/>
+                                    <string key="title">Child
+Status</string>
+                                    <font key="font" metaFont="label"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="prefClick:" target="-2" id="87"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </customView>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="16"/>
+            </connections>
+        </window>
+        <customView id="19" userLabel="prefsView" customClass="nsPrefsView">
+            <rect key="frame" x="0.0" y="0.0" width="541" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <imageView id="22">
+                    <rect key="frame" x="253" y="0.0" width="35" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="32options" id="120"/>
+                </imageView>
+                <button verticalHuggingPriority="750" id="20">
+                    <rect key="frame" x="377" y="6" width="159" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                    <buttonCell key="cell" type="squareTextured" title="Show All Preferences" bezelStyle="texturedSquare" alignment="center" borderStyle="border" inset="2" id="119">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="showAll:" target="-2" id="54"/>
+                    </connections>
+                </button>
+            </subviews>
+            <connections>
+                <outlet property="imageView" destination="22" id="25"/>
+                <outlet property="showAllButton" destination="20" id="26"/>
+            </connections>
+        </customView>
+    </objects>
+    <resources>
+        <image name="32general" width="32" height="32"/>
+        <image name="32options" width="32" height="32"/>
+        <image name="32reports" width="32" height="32"/>
+        <image name="32slideshow" width="32" height="32"/>
+        <image name="32source" width="32" height="32"/>
+        <image name="32web" width="32" height="32"/>
+        <image name="cstat32" width="32" height="32"/>
+        <image name="dates32" width="32" height="32"/>
+        <image name="fields32" width="32" height="32"/>
+        <image name="folders32" width="32" height="32"/>
+        <image name="privacy32" width="32" height="32"/>
+        <image name="startup32" width="32" height="32"/>
+        <image name="toolMultimediaF" width="32" height="32"/>
+        <image name="toolView" width="32" height="32"/>
+    </resources>
+</document>

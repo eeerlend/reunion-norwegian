@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6250"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="vcMediaSidebar">
+            <connections>
+                <outlet property="familyMedia" destination="952" id="966"/>
+                <outlet property="familyScroll" destination="949" id="965"/>
+                <outlet property="familyTitle" destination="972" id="975"/>
+                <outlet property="familyView" destination="948" id="959"/>
+                <outlet property="husbandMedia" destination="931" id="962"/>
+                <outlet property="husbandScroll" destination="922" id="960"/>
+                <outlet property="husbandTitle" destination="974" id="977"/>
+                <outlet property="husbandView" destination="940" id="957"/>
+                <outlet property="shareMenu" destination="990" id="994"/>
+                <outlet property="splitView" destination="955" id="956"/>
+                <outlet property="view" destination="918" id="937"/>
+                <outlet property="wifeMedia" destination="946" id="964"/>
+                <outlet property="wifeScroll" destination="943" id="963"/>
+                <outlet property="wifeTitle" destination="973" id="976"/>
+                <outlet property="wifeView" destination="941" id="958"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view id="918">
+            <rect key="frame" x="0.0" y="0.0" width="277" height="837"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <splitView dividerStyle="thin" id="955" customClass="mediaSplitView">
+                    <rect key="frame" x="0.0" y="-2" width="277" height="839"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <customView id="940">
+                            <rect key="frame" x="0.0" y="0.0" width="277" height="279"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <customView id="974" customClass="mediaSidebarTitle">
+                                    <rect key="frame" x="0.0" y="257" width="277" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <connections>
+                                        <outlet property="mediaSidebar" destination="-2" id="978"/>
+                                    </connections>
+                                </customView>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="922">
+                                    <rect key="frame" x="0.0" y="0.0" width="277" height="259"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <clipView key="contentView" id="FXk-pm-lGO">
+                                        <rect key="frame" x="1" y="1" width="275" height="257"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <customView id="931" customClass="nsMediaView">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="257"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <connections>
+                                                    <outlet property="titleView" destination="974" id="988"/>
+                                                    <outlet property="vcOwner" destination="-2" id="970"/>
+                                                </connections>
+                                            </customView>
+                                        </subviews>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.036269430071115494" horizontal="YES" id="929">
+                                        <rect key="frame" x="-100" y="-100" width="396" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="NO" id="930">
+                                        <rect key="frame" x="262" y="1" width="14" height="257"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                            </subviews>
+                        </customView>
+                        <customView id="941">
+                            <rect key="frame" x="0.0" y="280" width="277" height="279"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <customView id="973" customClass="mediaSidebarTitle">
+                                    <rect key="frame" x="0.0" y="257" width="277" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <connections>
+                                        <outlet property="mediaSidebar" destination="-2" id="979"/>
+                                    </connections>
+                                </customView>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="943">
+                                    <rect key="frame" x="0.0" y="0.0" width="277" height="259"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <clipView key="contentView" id="QdV-vx-nEE">
+                                        <rect key="frame" x="1" y="1" width="275" height="257"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <customView id="946" customClass="nsMediaView">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="257"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <connections>
+                                                    <outlet property="titleView" destination="973" id="989"/>
+                                                    <outlet property="vcOwner" destination="-2" id="971"/>
+                                                </connections>
+                                            </customView>
+                                        </subviews>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.036269430071115494" horizontal="YES" id="944">
+                                        <rect key="frame" x="-100" y="-100" width="396" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" controlSize="small" horizontal="NO" id="945">
+                                        <rect key="frame" x="262" y="1" width="14" height="257"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                            </subviews>
+                        </customView>
+                        <customView id="948">
+                            <rect key="frame" x="0.0" y="560" width="277" height="279"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <customView id="972" customClass="mediaSidebarTitle">
+                                    <rect key="frame" x="0.0" y="257" width="277" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <connections>
+                                        <outlet property="mediaSidebar" destination="-2" id="980"/>
+                                    </connections>
+                                </customView>
+                                <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="949">
+                                    <rect key="frame" x="0.0" y="0.0" width="277" height="259"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <clipView key="contentView" id="d6d-DP-dNo">
+                                        <rect key="frame" x="1" y="1" width="275" height="257"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <customView id="952" customClass="nsMediaView">
+                                                <rect key="frame" x="0.0" y="0.0" width="257" height="257"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                <connections>
+                                                    <outlet property="titleView" destination="972" id="987"/>
+                                                    <outlet property="vcOwner" destination="-2" id="969"/>
+                                                </connections>
+                                            </customView>
+                                        </subviews>
+                                    </clipView>
+                                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="0.036269430071115494" horizontal="YES" id="954">
+                                        <rect key="frame" x="-100" y="-100" width="396" height="15"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                    <scroller key="verticalScroller" verticalHuggingPriority="750" controlSize="small" horizontal="NO" id="953">
+                                        <rect key="frame" x="262" y="1" width="14" height="257"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </scroller>
+                                </scrollView>
+                            </subviews>
+                        </customView>
+                    </subviews>
+                    <holdingPriorities>
+                        <real value="250"/>
+                        <real value="250"/>
+                        <real value="250"/>
+                    </holdingPriorities>
+                </splitView>
+            </subviews>
+        </view>
+        <menu id="990" userLabel="shareMenu">
+            <items>
+                <menuItem title="email" tag="503" id="993">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="shareAction:" target="-2" id="996"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Preview/Print" tag="501" id="991">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="shareAction:" target="-2" id="997"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Copy to Clipboard" tag="502" id="992">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="shareAction:" target="-2" id="995"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
+    </objects>
+</document>
