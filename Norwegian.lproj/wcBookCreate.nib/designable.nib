@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1060" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="vcBookCreate">
+            <connections>
+                <outlet property="ancestorSourceView" destination="mEO-Ae-LYc" id="BRO-xa-W7H"/>
+                <outlet property="descendantSourceView" destination="ROt-Mf-Mdj" id="4jG-J6-1Gb"/>
+                <outlet property="view" destination="94" id="167"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <view id="94">
+            <rect key="frame" x="0.0" y="0.0" width="491" height="461"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" tag="202" id="121" customClass="tfReunion">
+                    <rect key="frame" x="116" y="361" width="42" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" tag="6" title="NA" drawsBackground="YES" id="122">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="106" id="169"/>
+                    </connections>
+                </textField>
+                <button tag="206" id="119">
+                    <rect key="frame" x="115" y="276" width="150" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Use privacy filtering" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="9" inset="2" id="124">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="157"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" id="118">
+                    <rect key="frame" x="29" y="231" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Include:" id="125">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="117">
+                    <rect key="frame" x="44" y="34" width="419" height="5"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
+                <textField verticalHuggingPriority="750" id="114">
+                    <rect key="frame" x="29" y="364" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Generations:" id="128">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="201" id="113">
+                    <rect key="frame" x="161" y="356" width="19" height="27"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <stepperCell key="cell" continuous="YES" alignment="left" tag="5" minValue="2" maxValue="99" doubleValue="2" valueWraps="YES" id="129"/>
+                    <connections>
+                        <action selector="commandAction:" target="121" id="156"/>
+                    </connections>
+                </stepper>
+                <button tag="302" id="112">
+                    <rect key="frame" x="115" y="211" width="125" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Preferred pictures" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="11" inset="2" id="130">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="164"/>
+                    </connections>
+                </button>
+                <button tag="304" id="175">
+                    <rect key="frame" x="115" y="175" width="125" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Surname pages" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="11" inset="2" id="176">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="177"/>
+                    </connections>
+                </button>
+                <button tag="305" id="178">
+                    <rect key="frame" x="115" y="157" width="125" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Place index" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="11" inset="2" id="179">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="180"/>
+                    </connections>
+                </button>
+                <button tag="303" id="109">
+                    <rect key="frame" x="115" y="193" width="120" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Media pages" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="19" inset="2" id="133">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="159"/>
+                    </connections>
+                </button>
+                <popUpButton verticalHuggingPriority="750" tag="210" id="108" customClass="nsPopupShell">
+                    <rect key="frame" x="115" y="250" width="165" height="22"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <popUpButtonCell key="cell" type="push" title="Item1" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="136" id="134">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" title="OtherViews" id="135">
+                            <items>
+                                <menuItem title="Item1" state="on" id="136"/>
+                                <menuItem title="Item2" id="137"/>
+                                <menuItem title="Item3" id="138"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <button tag="205" id="107">
+                    <rect key="frame" x="115" y="334" width="201" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="-n-" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="8" inset="2" id="139">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="165"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" tag="401" id="106" customClass="tfReunion">
+                    <rect key="frame" x="118" y="126" width="345" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" tag="12" title="L100" drawsBackground="YES" id="140">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="181" id="LfQ-DP-z4z"/>
+                    </connections>
+                </textField>
+                <button tag="301" id="105">
+                    <rect key="frame" x="115" y="229" width="71" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Sources" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="10" inset="2" id="141">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="162"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" id="104">
+                    <rect key="frame" x="29" y="128" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Book Title:" id="142">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" tag="402" id="181" customClass="tfReunion">
+                    <rect key="frame" x="118" y="99" width="345" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" tag="12" title="L100" drawsBackground="YES" id="184">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="185" id="zpe-9Z-pqW"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="182">
+                    <rect key="frame" x="29" y="101" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Subtitle:" id="183">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" tag="403" id="185" customClass="tfReunion">
+                    <rect key="frame" x="118" y="72" width="345" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" tag="12" title="L100" drawsBackground="YES" id="188">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <outlet property="nextKeyView" destination="Kb5-H9-gn5" id="NOR-3y-lU1"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="186">
+                    <rect key="frame" x="29" y="74" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Author:" id="187">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" tag="404" id="Kb5-H9-gn5" customClass="tfReunion">
+                    <rect key="frame" x="118" y="45" width="345" height="19"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" tag="12" title="L100" drawsBackground="YES" id="fiH-cI-Lda">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="59i-dW-bTL">
+                    <rect key="frame" x="29" y="47" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Copyright:" id="1L5-uu-iSx">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="102">
+                    <rect key="frame" x="29" y="255" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Layout:" id="144">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" tag="103" id="189">
+                    <rect key="frame" x="115" y="431" width="165" height="22"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <popUpButtonCell key="cell" type="push" title="Family History (Outline)" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="clipping" state="on" borderStyle="borderAndBezel" tag="2" inset="2" arrowPosition="arrowAtCenter" preferredEdge="maxY" selectedItem="195" id="192">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" title="OtherViews" id="193">
+                            <items>
+                                <menuItem title="Register (Narrative)" tag="1" id="196"/>
+                                <menuItem title="Family History (Outline)" state="on" tag="2" id="195"/>
+                                <menuItem title="Ancestor (Narrative)" tag="3" id="HAG-Ba-xYm"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="197"/>
+                    </connections>
+                </popUpButton>
+                <textField verticalHuggingPriority="750" id="190">
+                    <rect key="frame" x="29" y="436" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Format:" id="191">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button tag="203" id="101">
+                    <rect key="frame" x="115" y="316" width="175" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Bold children only" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="7" inset="2" id="145">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="163"/>
+                    </connections>
+                </button>
+                <button tag="204" id="172">
+                    <rect key="frame" x="130" y="298" width="175" height="18"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="and their siblings" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" tag="21" inset="2" id="173">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="174"/>
+                    </connections>
+                </button>
+                <textField verticalHuggingPriority="750" id="100">
+                    <rect key="frame" x="29" y="336" width="84" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Prune:" id="146">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" tag="5001" id="99">
+                    <rect key="frame" x="124" y="-1" width="217" height="32"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <buttonCell key="cell" type="push" title="Create Book Project..." bezelStyle="rounded" alignment="center" borderStyle="border" tag="5001" inset="2" id="147">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="commandAction:" target="-2" id="166"/>
+                    </connections>
+                </button>
+                <customView id="ROt-Mf-Mdj">
+                    <rect key="frame" x="114" y="387" width="352" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textField verticalHuggingPriority="750" tag="101" id="103">
+                            <rect key="frame" x="2" y="25" width="332" height="14"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" tag="3" title="-hn-" id="143">
+                                <font key="font" metaFont="smallSystem"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                        <textField verticalHuggingPriority="750" tag="102" id="120">
+                            <rect key="frame" x="2" y="5" width="332" height="14"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <animations/>
+                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" tag="4" title="-wn-" id="123">
+                                <font key="font" metaFont="smallSystem"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <animations/>
+                </customView>
+                <customView id="mEO-Ae-LYc">
+                    <rect key="frame" x="114" y="388" width="352" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <matrix verticalHuggingPriority="750" tag="111" allowsEmptySelection="NO" autosizesCells="NO" id="93Z-w1-1Cj">
+                            <rect key="frame" x="2" y="2" width="338" height="38"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <animations/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            <size key="cellSize" width="338" height="18"/>
+                            <size key="intercellSpacing" width="4" height="2"/>
+                            <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" controlSize="small" inset="2" id="m4Y-Aa-oiF">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="smallSystem"/>
+                            </buttonCell>
+                            <cells>
+                                <column>
+                                    <buttonCell type="radio" title="-h-" imagePosition="left" alignment="left" controlSize="small" state="on" tag="111" inset="2" id="vC3-rr-5Qm">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <buttonCell type="radio" title="-w-" imagePosition="left" alignment="left" controlSize="small" tag="112" inset="2" id="NNw-8D-QsL">
+                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                </column>
+                            </cells>
+                        </matrix>
+                    </subviews>
+                    <animations/>
+                </customView>
+                <textField verticalHuggingPriority="750" tag="105" id="5VW-uX-bZk">
+                    <rect key="frame" x="-2" y="412" width="115" height="14"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <animations/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="-n-" id="rep-Ss-bYI">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <animations/>
+            <point key="canvasLocation" x="291.5" y="293.5"/>
+        </view>
+    </objects>
+</document>

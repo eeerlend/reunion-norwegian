@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1050" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="wcReunionConnectInfo">
+            <connections>
+                <outlet property="mediaFolderName" destination="GTP-7c-RYb" id="CYB-w4-vEQ"/>
+                <outlet property="notInDropboxMessage" destination="BNH-O1-Bio" id="7Gh-5j-7qy"/>
+                <outlet property="outlineView" destination="eHS-Ln-O0C" id="PEd-C5-9QT"/>
+                <outlet property="resetMessageIcon" destination="wuZ-L0-CvM" id="zeJ-cr-q6b"/>
+                <outlet property="resetMessageWindow" destination="ci7-YF-eit" id="aHx-q0-Xi9"/>
+                <outlet property="reunionTouchMessage" destination="c3B-RQ-YFy" id="Zfj-LN-fu6"/>
+                <outlet property="window" destination="5" id="23"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="info" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="5" userLabel="Window" customClass="winReunion">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="292" y="314" width="394" height="470"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="380" height="250"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="-2" width="394" height="470"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button tag="5050" id="28">
+                        <rect key="frame" x="8" y="7" width="23" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="helpMark" imagePosition="above" alignment="center" controlSize="small" tag="5050" id="43">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system" size="10"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="commandAction:" target="-2" id="29"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" tag="5001" id="30" customClass="btnReunion">
+                        <rect key="frame" x="281" y="3" width="110" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="5001" inset="2" id="44">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="commandAction:" target="-2" id="33"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" id="38">
+                        <rect key="frame" x="5" y="448" width="384" height="17"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Sharing Status" id="46">
+                            <font key="font" metaFont="smallSystemBold"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <scrollView focusRingType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="VLC-z7-ClL">
+                        <rect key="frame" x="8" y="101" width="378" height="349"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <clipView key="contentView" id="bW3-Xi-3Oa">
+                            <rect key="frame" x="1" y="1" width="376" height="347"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" indentationPerLevel="16" outlineTableColumn="5jp-64-xXv" id="eHS-Ln-O0C">
+                                    <rect key="frame" x="0.0" y="0.0" width="376" height="19"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <tableViewGridLines key="gridStyleMask" vertical="YES"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn identifier="title" editable="NO" width="373" minWidth="16" maxWidth="1000" id="5jp-64-xXv">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="zYc-vL-qmG">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-2" id="GN5-H3-4U1"/>
+                                        <outlet property="delegate" destination="-2" id="bka-OG-pjO"/>
+                                    </connections>
+                                </outlineView>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="Pju-bD-gHJ">
+                            <rect key="frame" x="1" y="332" width="376" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="0UH-Sk-G2L">
+                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="c3B-RQ-YFy">
+                        <rect key="frame" x="17" y="239" width="359" height="164"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="Gdq-aT-ZAx">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">To share this family file for the first time, open ReunionTouch on your device and tap "Download a family file from Dropbox" in the Welcome window.
+
+If this family file was previously shared, open ReunionTouch on your device. If necessary, tap the name of your family file in the Welcome window.</string>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="BNH-O1-Bio">
+                        <rect key="frame" x="17" y="266" width="359" height="137"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="JFD-ZS-XpS">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">To share this family file with devices, quit Reunion and move the family file to Dropbox.
+
+Then use ReunionTouch on your device to download the family file.</string>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="X1f-LT-8g1">
+                        <rect key="frame" x="6" y="50" width="4" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Q8V-Sc-M39">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" tag="101" id="dkQ-Xa-t2e" customClass="btnReunion">
+                        <rect key="frame" x="34" y="3" width="121" height="28"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="push" title="Reset Sharing..." bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="5001" inset="2" id="wYh-bx-yYP">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="commandAction:" target="-2" id="ZwR-sN-Css"/>
+                        </connections>
+                    </button>
+                    <box autoresizesSubviews="NO" title="Imported Media Folder" borderType="line" id="ag0-f3-zQu">
+                        <rect key="frame" x="5" y="33" width="384" height="63"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="382" height="47"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="GTP-7c-RYb">
+                                    <rect key="frame" x="6" y="30" width="371" height="14"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingMiddle" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="O4t-rQ-Lfk">
+                                        <font key="font" metaFont="smallSystem"/>
+                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <button verticalHuggingPriority="750" tag="102" id="9fz-Cx-IzD" customClass="btnReunion">
+                                    <rect key="frame" x="131" y="3" width="121" height="28"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <buttonCell key="cell" type="push" title="Change..." bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="5001" inset="2" id="fVT-0B-KGa">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="smallSystem"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="commandAction:" target="-2" id="d35-LQ-cxG"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <font key="titleFont" metaFont="smallSystemBold"/>
+                    </box>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="178" y="184"/>
+        </window>
+        <window title="Message" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="ci7-YF-eit" userLabel="Window" customClass="winReunion">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="98" y="179" width="561" height="209"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <value key="minSize" type="size" width="213" height="107"/>
+            <view key="contentView" id="eXT-9K-8nO">
+                <rect key="frame" x="0.0" y="1" width="561" height="209"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" tag="3" id="b7j-8c-FgJ" customClass="rtfTextField">
+                        <rect key="frame" x="75" y="96" width="475" height="106"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" tag="3" id="9Ji-l3-79m">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">A “reset” will temporarily discontinue sharing this family file with all devices.
+
+The next time the family file is opened on the device, sharing will resume.
+When a device resumes sharing, it will be updated with the current content of this family file.</string>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" tag="1101" id="5KF-4X-2VO">
+                        <rect key="frame" x="437" y="5" width="110" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Reset Sharing" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="5001" inset="2" id="Jv4-Bi-fAG">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="resetMessageAction:" target="-2" id="qRp-BM-6ES"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" tag="1102" id="nBX-ab-a7x">
+                        <rect key="frame" x="327" y="5" width="112" height="28"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" tag="5002" inset="2" id="vTH-gt-BBV">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="smallSystem"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="resetMessageAction:" target="-2" id="HHO-OV-xw6"/>
+                        </connections>
+                    </button>
+                    <customView id="wuZ-L0-CvM" customClass="nsMessageIcon">
+                        <rect key="frame" x="5" y="138" width="64" height="64"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </customView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" id="Xxz-Px-xlf">
+                        <rect key="frame" x="75" y="37" width="475" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" id="G7W-3m-Ygu">
+                            <font key="font" metaFont="systemBold"/>
+                            <string key="title">Note: After clicking the Reset Sharing button, make sure Dropbox is finished syncing before opening the family file on your device(s).</string>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button tag="1103" id="qcz-gl-wSY">
+                        <rect key="frame" x="5" y="9" width="23" height="23"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="helpMark" imagePosition="above" alignment="center" tag="5050" id="ps1-qB-sNi">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="label"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="resetMessageAction:" target="-2" id="3zG-NW-Kew"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="256.5" y="682.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="helpMark" width="23" height="23"/>
+    </resources>
+</document>

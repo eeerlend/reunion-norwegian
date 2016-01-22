@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>addTitle</key>
+	<false/>
+	<key>footer</key>
+	<false/>
+	<key>graphicsArray</key>
+	<array>
+		<dict>
+			<key>alpha</key>
+			<real>0.51080954074859619</real>
+			<key>drawRect</key>
+			<string>{{-38.725677, 0}, {689.45135, 792}}</string>
+			<key>fileName</key>
+			<string>graphic01.graphic</string>
+			<key>frontLayer</key>
+			<integer>0</integer>
+			<key>graphicType</key>
+			<integer>100</integer>
+			<key>imageFrame</key>
+			<integer>0</integer>
+			<key>imageShadow</key>
+			<integer>0</integer>
+			<key>pageIndex</key>
+			<integer>0</integer>
+			<key>placement</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>drawRect</key>
+			<string>{{108, 665.25781}, {396, 46}}</string>
+			<key>fileName</key>
+			<string>graphic02.graphic</string>
+			<key>frontLayer</key>
+			<integer>0</integer>
+			<key>graphicType</key>
+			<integer>200</integer>
+			<key>pageIndex</key>
+			<integer>0</integer>
+			<key>textAlignment</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>drawRect</key>
+			<string>{{110.3125, 658.75391}, {391.375, 1}}</string>
+			<key>frontLayer</key>
+			<integer>0</integer>
+			<key>graphicType</key>
+			<integer>300</integer>
+			<key>pageIndex</key>
+			<integer>0</integer>
+			<key>shapeBorder</key>
+			<integer>1</integer>
+			<key>shapeBorderColor</key>
+			<integer>4287137928</integer>
+			<key>shapeBorderWidth</key>
+			<integer>50</integer>
+			<key>shapeFill</key>
+			<integer>0</integer>
+			<key>shapeFillColor</key>
+			<integer>4293848814</integer>
+			<key>shapeShadow</key>
+			<integer>20</integer>
+			<key>shapeType</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>alpha</key>
+			<real>1</real>
+			<key>drawRect</key>
+			<string>{{153, 301.60608}, {306, 341.28}}</string>
+			<key>fileName</key>
+			<string>graphic03.graphic</string>
+			<key>frontLayer</key>
+			<integer>0</integer>
+			<key>graphicType</key>
+			<integer>100</integer>
+			<key>imageFrame</key>
+			<integer>0</integer>
+			<key>imageShadow</key>
+			<integer>0</integer>
+			<key>pageIndex</key>
+			<integer>0</integer>
+			<key>placement</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>header</key>
+	<false/>
+	<key>includeInTOC</key>
+	<false/>
+	<key>sectionTitle</key>
+	<string>Back Cover</string>
+</dict>
+</plist>
