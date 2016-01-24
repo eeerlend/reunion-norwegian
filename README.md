@@ -17,7 +17,7 @@ Read about [Reunion localization here](http://www.leisterpro.com/doc/version11/a
 
 First, fork and clone this project, and go to its folder in Terminal application. Run the following script, to fetch the latest language files from Reunion
 ```
-> sh ./reunion.sh
+sh ./reunion.sh
 ```
 
 You will now have a new folder; English.lproj. This holds all the original Reunion language files.
