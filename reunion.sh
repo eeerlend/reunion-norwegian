@@ -4,4 +4,4 @@ curl -sS http://www.leisterpro.com/doc/version11/altresource/Reunion-11-English-
 unzip tmpfile.zip
 rm tmpfile.zip
 rm -r ./__MACOSX
-cp -R ./English.lproj ./Norwegian.lproj
+#cp -R ./English.lproj ./Norwegian.lproj
